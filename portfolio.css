@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0f0f21;
+  color: #fff;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  background: #181841;
+  z-index: 1000;
+}
+
+.nav-links {
+    margin-right: 80px;
+    display: flex;
+    gap: 60px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links a:hover {
+  font-size: 22px;
+}
+
+.nav-links a::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #0ef;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+
+}
+
+.menu {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    
+        border-radius: 30px;
+        padding: 20px;
+        background-color: #444b75;
+        display: none;
+        position: absolute;
+        right: -22px;
+        top: 15px;
+        flex-direction: column;
+        width: 150px;
+        text-align: center;
+  }    
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .home {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* HOME */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  gap: 50px;
+}
+
+.home-text h1{
+    color: burlywood;
+}
+
+.social a {
+  font-size: x-large;
+  text-decoration: none;
+  color: #41bcba;
+  border-radius: 50%;
+  border: 2px solid #0ef;
+  /* box-shadow: 0 0 15px #0ef; */
+}
+
+.social :hover{
+    box-shadow: 0 0 15px #0ef;
+    border-radius: 50%;
+}
+
+.home-img {
+  background-size: cover;
+   background-image: url(footo.jpeg);
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  border: 4px solid rgb(97 101 145);
+}
+
+.btn {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: rgb(156, 90, 62);
+  color: black;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+
+/* ABOUT */
+.about {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about h2 {
+  margin-top: 60px;
+  color: tomato;
+  margin-bottom: 40px;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.about-img {
+  background-image: url(https://i.pinimg.com/originals/f8/19/e4/f819e4d4f5b6a266a71f8a5248003e39.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid rgb(97, 101, 145);
+}
+
+.about-details {
+    font-family: math;
+    background-color: #4a5582;
+    color: white;
+    padding: 30px;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+ 
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-details {
+    text-align: center;
+  }
+
+  .about-img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+
+/*Skills*/
+
+.skills {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.skills h2 {
+  color: tomato;
+  margin-bottom: 40px;
+  margin-top: 60px;
+}
+
+
+.skills-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+
+.skill-card {
+  background: #0f172a;
+  color: white;
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+
+.skill-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+
+.skill-card p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+@media (max-width: 480px) {
+  .skills-details {
+    gap: 15px;
+  }
+
+  .skill-card img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* EDUCATION */
+.education {
+  padding: 200px 10%;
+  text-align: center;
+}
+
+.education h2 {
+  margin-top: 60px;
+  color: tomato;
+  margin-bottom: 40px;
+}
+
+.education-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.edu-card {
+  background: #181841;
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+.year {
+  color: #f97316;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.degree {
+  font-size: 1.1rem;
+  margin-bottom: 6px;
+}
+
+.school {
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 480px) {
+  .education {
+    padding: 60px 6%;
+  }
+}
+
+/*Contact*/
+
+.contact-section {
+  padding: 80px 10%;
+  background: #0f172a;
+  color: #fff;
+  font-family: system-ui, sans-serif;
+}
+ 
+.contact-container {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+ 
+.contact-left {
+  flex: 1;
+}
+
+.contact-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-left h2 span {
+  color: #38bdf8;
+}
+
+.contact-text {
+  opacity: 0.85;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+ 
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #1e293b;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact-form button {
+  padding: 14px;
+  background: #38bdf8;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #0ea5e9;
+  transform: translateY(-2px);
+}
+
+.contact-right {
+  margin-top: 160px;
+  flex: 1;
+  background: #020617;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+ 
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-links a {
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #1e293b;
+  color: #38bdf8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #38bdf8;
+  color: #020617;
+}
+
+ 
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-left h2 {
+    font-size: 2rem;
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0f172a;
+  color: white;
+  font-size: 0.9rem;
+}
+ 
+@media (max-width: 480px) {
+  .contact {
+    padding: 60px 6%;
+  }
+
+  button {
+    border-radius: 15px;
+  }
+}
+
+
+
+
