@@ -212,7 +212,7 @@ body {
 .skills-details {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  gap: 80px;
+  gap: 20px;
 }
 
 
